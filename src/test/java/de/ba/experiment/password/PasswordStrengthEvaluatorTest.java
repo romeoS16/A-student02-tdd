@@ -37,38 +37,14 @@ public class PasswordStrengthEvaluatorTest {
 
     @Test
     public void hasMinOneLower() {
-        boolean result = PasswordStrengthEvaluator.checkString("sfSd2fg");
-        assumeTrue(result);
+        String result = PasswordStrengthEvaluator.evaluateStrength("aaaAAAbbb!223j");
+        assertEquals("STRONG", result);
     }
 
     @Test
     public void hasNoOneLower() {
-        boolean result = PasswordStrengthEvaluator.checkString("FAHKSDGBF5");
-        assumeFalse(result);
-    }
-
-        @Test
-    public void hasMinOneUpper() {
-        boolean result = PasswordStrengthEvaluator.checkString("sfSd2fg");
-        assumeTrue(result);
-    }
-
-    @Test
-    public void hasNoOneUpper() {
-        boolean result = PasswordStrengthEvaluator.checkString("sadfgdsf5");
-        assumeFalse(result);
-    }
-
-        @Test
-    public void hasMinOneDigit() {
-        boolean result = PasswordStrengthEvaluator.checkString("sfSd2fg");
-        assumeTrue(result);
-    }
-
-    @Test
-    public void hasNoOneDigit() {
-        boolean result = PasswordStrengthEvaluator.checkString("FAHKSasdgfDGBF");
-        assumeFalse(result);
+        String result = PasswordStrengthEvaluator.evaluateStrength("ASF2");
+        assertEquals("WEAK", result);
     }
 
 

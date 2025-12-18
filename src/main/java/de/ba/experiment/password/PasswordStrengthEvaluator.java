@@ -12,29 +12,17 @@ public class PasswordStrengthEvaluator {
      */
 
     public static String evaluateStrength(String password) {
-        if (password == null || password.isEmpty() || password == " ") {
+        if (password == null || password.isEmpty() || password == " " || password.length() < 6) {
             return "WEAK";
         }
-        if (password.length() < 8) {
-            return "WEAK";
-        }
-        if (password.length() < 10) {
-            return "MEDIUM";
-        }
-
-        if (checkString(password)) {
-            return "STRONG";
-        }
-        return "MEDIUM";
-    }
-
-    public static boolean checkString(String str) {
         char ch;
+        int strongessLevel = 0;
         boolean capitalFlag = false;
         boolean lowerCaseFlag = false;
         boolean numberFlag = false;
-        for(int i=0;i < str.length();i++) {
-            ch = str.charAt(i);
+        boolean specialFlag = false;
+        for(int i=0;i < password.length();i++) {
+            ch = password.charAt(i);
             if( Character.isDigit(ch)) {
                 numberFlag = true;
             }
@@ -42,10 +30,34 @@ public class PasswordStrengthEvaluator {
                 capitalFlag = true;
             } else if (Character.isLowerCase(ch)) {
                 lowerCaseFlag = true;
+            } else if (ch == '!' || ch == '@' || ch == '#' || ch == '$' || ch == '%' || ch == '^' || ch == '&' || ch == '*' || ch == '(' || ch == ')' || ch == '-' || ch == '+') {
+                specialFlag = true;
             }
-            if(numberFlag && capitalFlag && lowerCaseFlag)
-                return true;
         }
-        return false;
+        if (numberFlag) {
+            strongessLevel++;
+        }
+        if (capitalFlag) {
+            strongessLevel++;
+        }
+        if (lowerCaseFlag) {
+            strongessLevel++;
+        }
+        if (password.length() < 9) {
+            strongessLevel++;
+        }
+        if (specialFlag) {
+            strongessLevel++;
+        }
+
+
+
+        if (strongessLevel == 3) {
+            return "MEDIUM";
+        } else if (strongessLevel >= 4) {
+            return "STRONG";
+        } else {
+            return "WEAK";
+        }
     }
 }
