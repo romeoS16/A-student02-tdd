@@ -3,6 +3,7 @@ package de.ba.experiment.password;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assume.assumeFalse;
 import static org.junit.Assume.assumeTrue;
 
 public class PasswordStrengthEvaluatorTest {
@@ -39,5 +40,37 @@ public class PasswordStrengthEvaluatorTest {
         boolean result = PasswordStrengthEvaluator.checkString("sfSd2fg");
         assumeTrue(result);
     }
+
+    @Test
+    public void hasNoOneLower() {
+        boolean result = PasswordStrengthEvaluator.checkString("FAHKSDGBF5");
+        assumeFalse(result);
+    }
+
+        @Test
+    public void hasMinOneUpper() {
+        boolean result = PasswordStrengthEvaluator.checkString("sfSd2fg");
+        assumeTrue(result);
+    }
+
+    @Test
+    public void hasNoOneUpper() {
+        boolean result = PasswordStrengthEvaluator.checkString("sadfgdsf5");
+        assumeFalse(result);
+    }
+
+        @Test
+    public void hasMinOneDigit() {
+        boolean result = PasswordStrengthEvaluator.checkString("sfSd2fg");
+        assumeTrue(result);
+    }
+
+    @Test
+    public void hasNoOneDigit() {
+        boolean result = PasswordStrengthEvaluator.checkString("FAHKSasdgfDGBF");
+        assumeFalse(result);
+    }
+
+
 
 }
