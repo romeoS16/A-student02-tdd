@@ -16,5 +16,5 @@ public class PalindromeCheckerTest {
         assertTrue(result);
     }
 
-    // TODO: weitere Testfälle ergänzen
+    
 }

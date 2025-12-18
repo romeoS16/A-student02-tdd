@@ -14,7 +14,21 @@ public class PalindromeChecker {
      */
 
     public static boolean isPalindrome(String text) {
-        // TODO: implementieren
-        return false;
+        text.replaceAll(" ", "");
+        if (text == "")
+            return true;
+        int anzahl = text.length();
+        if (anzahl == 1)
+            return true;
+            for (int i = 0; i > anzahl/2; i--) {
+                char a = text.charAt(i);
+                char b = text.charAt(anzahl);
+                if (a == b) {
+                    continue;
+                } else {
+                    return false;
+                }
+            }
+            return true;
     }
 }
