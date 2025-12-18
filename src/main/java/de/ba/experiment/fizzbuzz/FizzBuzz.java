@@ -17,7 +17,7 @@ public class FizzBuzz {
             return new String[]{"1"};
         }
         for (int i = 0; i < n; i++) {
-            if ((i % 3) == 0) {
+            if ((i+1 % 3) == 0) {
                 array[i] = "Fizz, ";
                 continue;
             }
