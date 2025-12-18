@@ -12,7 +12,11 @@ public class FizzBuzz {
      */
 
     public static String[] fizzBuzz(int n) {
-        // TODO: implementieren
-        return new String[0];
+        String[] array = new String[n];
+        for (int i = 0; i < n; i++) {
+            array[i] = Integer.toString(i + 1);
+        }
+        System.out.println(array);
+        return array;
     }
 }

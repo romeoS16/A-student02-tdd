@@ -16,5 +16,4 @@ public class FizzBuzzTest {
         assertArrayEquals(new String[]{"1"}, result);
     }
 
-    // TODO: weitere Tests schreiben
 }
