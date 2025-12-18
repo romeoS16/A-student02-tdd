@@ -17,7 +17,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void fizzBuzzOfThree_returnsArrayWithOne() {
+    public void fizzBuzzOfThree_returnsCoolArray() {
         String[] result = FizzBuzz.fizzBuzz(3);
         assertArrayEquals(new String[]{"1, 2, Fizz"}, result);
     }
