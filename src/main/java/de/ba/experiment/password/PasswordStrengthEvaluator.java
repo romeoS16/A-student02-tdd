@@ -34,13 +34,13 @@ public class PasswordStrengthEvaluator {
                 specialFlag = true;
             }
         }
-        if (numberFlag) {
+        if (hasNumber(password)) {
             strongessLevel++;
         }
-        if (capitalFlag) {
+        if (hasUpper(password)) {
             strongessLevel++;
         }
-        if (lowerCaseFlag) {
+        if (hasLower(password)) {
             strongessLevel++;
         }
         if (password.length() < 9) {
@@ -50,8 +50,6 @@ public class PasswordStrengthEvaluator {
             strongessLevel++;
         }
 
-
-
         if (strongessLevel == 3) {
             return "MEDIUM";
         } else if (strongessLevel >= 4) {
@@ -60,4 +58,43 @@ public class PasswordStrengthEvaluator {
             return "WEAK";
         }
     }
+
+    public static boolean hasSpecial(String password) {
+        for (int i = 0; i < password.length(); i++) {
+            char ch = password.charAt(i);
+            if (ch == '!' || ch == '@' || ch == '#' || ch == '$' || ch == '%' || ch == '^' || ch == '&' || ch == '*' || ch == '(' || ch == ')' || ch == '-' || ch == '+') {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean hasLower(String password) {
+        for (int i = 0; i < password.length(); i++) {
+            if (Character.isLowerCase(password.charAt(i))) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean hasUpper(String password) {
+        for (int i = 0; i < password.length(); i++) {
+            if (Character.isUpperCase(password.charAt(i))) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean hasNumber(String password) {
+        for (int i = 0; i < password.length(); i++) {
+            if (Character.isDigit(password.charAt(i))) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
 }
