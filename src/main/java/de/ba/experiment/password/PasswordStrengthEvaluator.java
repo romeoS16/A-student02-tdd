@@ -12,7 +12,12 @@ public class PasswordStrengthEvaluator {
      */
 
     public static String evaluateStrength(String password) {
-        // TODO: implementieren
+        if (password == null || password.isEmpty() || password == " ") {
+            return "WEAK";
+        }
+        if (password.length() < 8) {
+            return "WEAK";
+        }
         return "STRONG";
     }
 }

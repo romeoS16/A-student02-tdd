@@ -27,9 +27,12 @@ public class PasswordStrengthEvaluatorTest {
         String result = PasswordStrengthEvaluator.evaluateStrength("");
         assertEquals("WEAK", result);
     }
+    @Test
+    public void blankPassword() {
+        String result = PasswordStrengthEvaluator.evaluateStrength(" ");
+        assertEquals("WEAK", result);
+    }
 
 
 
-
-    // TODO: weitere Tests ergänzen
 }
