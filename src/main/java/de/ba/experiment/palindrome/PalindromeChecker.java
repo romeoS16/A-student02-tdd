@@ -15,6 +15,7 @@ public class PalindromeChecker {
 
     public static boolean isPalindrome(String text) {
         text.replaceAll(" ", "");
+        text.toLowerCase();
         if (text == "")
             return true;
         int anzahl = text.length();
