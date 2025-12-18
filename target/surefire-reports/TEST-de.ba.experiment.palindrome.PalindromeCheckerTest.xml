@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="de.ba.experiment.palindrome.PalindromeCheckerTest" time="0.0" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="de.ba.experiment.palindrome.PalindromeCheckerTest" time="0.0" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="DE"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-25.0.1.8-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\failo\AppData\Local\Temp\surefire14949879847547199343\surefirebooter-20251218121413145_3.jar C:\Users\failo\AppData\Local\Temp\surefire14949879847547199343 2025-12-18T12-14-13_062-jvmRun1 surefire-20251218121413145_1tmp surefire_0-20251218121413145_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\failo\AppData\Local\Temp\surefire12247279043301393740\surefirebooter-20251218121503557_3.jar C:\Users\failo\AppData\Local\Temp\surefire12247279043301393740 2025-12-18T12-15-03_478-jvmRun1 surefire-20251218121503557_1tmp surefire_0-20251218121503557_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="E:\Studium\Romeo\studie\A-student02-tdd\target\test-classes;E:\Studium\Romeo\studie\A-student02-tdd\target\classes;C:\Users\failo\.m2\repository\junit\junit\4.13.1\junit-4.13.1.jar;C:\Users\failo\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\failo\AppData\Local\Temp\surefire14949879847547199343\surefirebooter-20251218121413145_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\failo\AppData\Local\Temp\surefire12247279043301393740\surefirebooter-20251218121503557_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="25.0.1+8-LTS"/>
@@ -60,5 +60,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
+  <testcase name="simpleUppercasePalindrome_returnsTrue" classname="de.ba.experiment.palindrome.PalindromeCheckerTest" time="0.0"/>
   <testcase name="simpleLowercasePalindrome_returnsTrue" classname="de.ba.experiment.palindrome.PalindromeCheckerTest" time="0.0"/>
 </testsuite>

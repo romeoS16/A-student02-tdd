@@ -21,4 +21,11 @@ public class PalindromeCheckerTest {
         boolean result = PalindromeChecker.isPalindrome("ANNA");
         assertTrue(result);
     }
+
+    @Test
+    public void simpleUngeradePalindrome_returnsTrue() {
+        boolean result = PalindromeChecker.isPalindrome("ANkNA");
+        assertTrue(result);
+    }
+
 }

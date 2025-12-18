@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: de.ba.experiment.fizzbuzz.FizzBuzzTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.048 s <<< FAILURE! -- in de.ba.experiment.fizzbuzz.FizzBuzzTest
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.046 s <<< FAILURE! -- in de.ba.experiment.fizzbuzz.FizzBuzzTest
 de.ba.experiment.fizzbuzz.FizzBuzzTest.fizzBuzzOfThree_returnsCoolArray -- Time elapsed: 0.005 s <<< FAILURE!
 array lengths differed, expected.length=1 actual.length=3; arrays first differed at element [0]; expected:<1, [2, Fizz]> but was:<1, []>
 	at org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:78)
