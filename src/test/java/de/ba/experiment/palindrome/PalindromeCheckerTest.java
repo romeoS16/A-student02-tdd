@@ -54,6 +54,12 @@ public class PalindromeCheckerTest {
         assertFalse(result);
     }
 
+    @Test
+    public void nullPalindrome_returnsFalse() {
+        boolean result = PalindromeChecker.isPalindrome(null);
+        assertFalse(result);
+    }
+
 
 
 

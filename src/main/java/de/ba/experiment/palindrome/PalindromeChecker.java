@@ -14,22 +14,24 @@ public class PalindromeChecker {
      */
 
     public static boolean isPalindrome(String text) {
-        text.replaceAll(" ", "");
-        text.toLowerCase();
-        if (text == "")
+        if (text == " ")
             return true;
+        if (text == null)
+            return false;
+        text = text.replaceAll(" ", "");
+        text = text.toLowerCase();
         int anzahl = text.length();
         if (anzahl == 1)
             return true;
-            for (int i = 0; i > anzahl/2; i--) {
-                char a = text.charAt(i);
-                char b = text.charAt(anzahl);
-                if (a == b) {
-                    continue;
-                } else {
-                    return false;
-                }
+        for (int i = 0; i < (anzahl/2) + 1; i++) {
+            char a = text.charAt(i);
+            char b = text.charAt(anzahl - i - 1);
+            if (a == b) {
+                continue;
+            } else {
+                return false;
             }
-            return true;
+        }
+        return true;
     }
 }
