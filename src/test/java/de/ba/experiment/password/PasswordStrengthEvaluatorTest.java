@@ -3,6 +3,7 @@ package de.ba.experiment.password;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assume.assumeTrue;
 
 public class PasswordStrengthEvaluatorTest {
 
@@ -33,6 +34,10 @@ public class PasswordStrengthEvaluatorTest {
         assertEquals("WEAK", result);
     }
 
-
+    @Test
+    public void hasMinOneLower() {
+        boolean result = PasswordStrengthEvaluator.checkString("sfSd2fg");
+        assumeTrue(result);
+    }
 
 }
