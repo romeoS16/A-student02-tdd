@@ -16,5 +16,9 @@ public class PalindromeCheckerTest {
         assertTrue(result);
     }
 
-    
+    @Test
+    public void simpleUppercasePalindrome_returnsTrue() {
+        boolean result = PalindromeChecker.isPalindrome("ANNA");
+        assertTrue(result);
+    }
 }
